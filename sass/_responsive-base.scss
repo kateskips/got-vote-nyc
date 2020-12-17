@@ -1,0 +1,49 @@
+/* RESPONSIVE PREPARATION
+   ====================================================================
+   Use these "as is"
+*/
+
+/*The following 7 lines are from Paul Irish and apply a border-box model.
+See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Basic Responsive Images and Video */
+img,video{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* Embedded Video Styles
+
+    These can be used to help add embedded video content, like YouTube videos, to your page. These styles require you set up your HTML in a specific way. See this CodePen for an example of it in use: http://codepen.io/profstein/pen/mArLRj
+*/
+
+.videoWrapper {
+	position: relative;
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper.ratio-16-9{
+    padding-bottom: 56.25%; /* 16:9 aspect ratio video */
+}
+
+.videoWrapper.ratio-4-3{
+    padding-bottom: 75%; /* 4:3 aspect ratio video */
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

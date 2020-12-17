@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | G.O.T Vote NYC</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+</head>
+<body class="home">
+    <header class="page-head page-header cf">
+       <div class="inner-section">
+            <div class="logo">
+                <a href="index.html">
+                <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+        <!--NAVIGATION-->
+        <a id="top"></a>
+        <div class="menu">
+            <a href="#" id="menu_button"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+        </div>
+        <nav id="main_nav">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="election-day.html">Election Day</a></li>
+                <li><a href="candidates.html">Candidates</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="last"><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <section class="top-header home-head">
+            <header>
+                <h1>Get Out To Vote NYC!</h1>
+                <h2>
+                    <small>Help make a strong impact! The 2016 Election is just around the corner.</small></h2>
+            </header>
+            <a href="register.html" class="get-started main-btn">Get Started</a>
+        </section>
+        <section class="countdown">
+           <h3 class="time-head">Til’ Inauguration Day</h3>
+           <div class="inner-section">
+            <div id="clock"></div>
+            <script type="text/javascript">
+  $('#clock').countdown('2017/1/20', function(event) {
+    $(this).html(event.strftime('<p class="days">%D<span>Days</span></p><p class="hours">%H<span>Hours</span></p><p class="minutes">%M<span>Minutes</span></p><p class="seconds">%S<span>Seconds</span></p>'));
+  });
+</script></div>
+        </section>
+        <section class="purple-inverse center about-home">
+            <div class="inner-section">
+                <h2>About G.O.T Vote NYC!</h2>
+                <p>Get Out the Vote NYC (GOT Vote NYC) is new nonprofit created with a mission to increase the number of registered voters in New York City, the number of voters going to the polls. We also strive to educate voters on the job responsibilities of elected positions, the candidates running to fill the positions and any ballot measures.</p>
+                <a href="about.html" class="inverse-btn">Read More</a>
+            </div>
+        </section>
+        <section class="events-home">
+            <h2 class="center">Upcoming Events and Debates</h2>
+            <p class="intro center">Find out when there will be debates, registration drives, etc.</p>
+            <div class="inner-section events">
+                <div class="col-3">
+                    <img src="/images/event-image.png" alt="election party">
+                    <ul>
+                        <li class="calendar-box">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </li>
+                        <li class="information">
+                            <h3>Open House & Election Party</h3>
+                            <h4><small>When</small></h4>
+                            <h4>November 8th, 2016<br>Revolution Mill Holdings</h4>
+                            <h5>Starting at 7:30pm</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <img src="/images/event-image.png" alt="election day watch party">
+                    <ul>
+                        <li class="calendar-box">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </li>
+                        <li class="information">
+                            <h3>Election Day Watch Party</h3>
+                            <h4><small>When</small></h4>
+                            <h4>November 8th, 2016<br>Queens Alumni Headquarters</h4>
+                            <h5>Starting at 8:30pm</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <img src="/images/event-image.png" alt="election results">
+                    <ul>
+                        <li class="calendar-box">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </li>
+                        <li class="information">
+                            <h3>Election Results Party</h3>
+                            <h4><small>When</small></h4>
+                            <h4>November 9th, 2016<br>The Cave</h4>
+                            <h5>Starting at 10am</h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="purple-inverse center candidates">
+               <div class="inner-section">
+                <h2>The Candidates</h2>
+                <div class="col-4">
+                    <img src="/images/donald-trump.jpg" alt="donald trump">
+                    <h3>Donald J.Trump</h3>
+                    <h4>Republican Party</h4>
+                </div>
+                <div class="col-4">
+                    <img src="/images/hillary-clinton.jpg" alt="hillary clinton">
+                    <h3>Hillary R. Clinton</h3>
+                    <h4>Democratic Party</h4>
+                </div>
+                <div class="col-4">
+                    <img src="/images/jill-stein.jpg" alt="jill stein">
+                    <h3>Jill Stein</h3>
+                    <h4>Green Party</h4>
+                </div>
+                <div class="col-4">
+                    <img src="/images/gary-johnson.jpg" alt="gary johnson">
+                    <h3>Gary Johnson</h3>
+                    <h4>Libertarian Party</h4>
+                </div>
+                <a href="candidates.html" class="inverse-btn">Read More</a>
+                </div>
+        </section>
+        <section class="dark-purple-inverse involved get-involved">
+           <div class="inner-section">
+            <div class="col-2">
+                <h2 class="get-involved">Get Involved</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip.</p>
+        <a href="resources.html" class="main-btn">Voting Resources</a>
+        <a href="http://www.huffingtonpost.com/entry/why-millennials-should-vote-we-the-voters_us_5807b9d9e4b0180a36e8344c" target="_blank" class="light-main-btn">Why Should I Vote?</a>
+            </div>
+            <div class="col-2">
+               <div class="social-share">
+                <h3>Inform Your Friends To Vote!</h3>
+                <!--social media share buttons-->
+                 <ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Google+" src="images/social_flat_rounded_rects_svg/Google+.svg"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img alt="Pin it" src="images/social_flat_rounded_rects_svg/Pinterest.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Submit to Reddit" src="images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img alt="Share on LinkedIn" src="images/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+</ul>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="election-day.html">Election Day</a></li>
+                <li><a href="candidates.html">Candidates</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+        <p>Copyright 2016 G.O.T VOTE NYC! - Go out and Vote!</p>
+    </footer>
+    <!--   Your jQuery and other JavaScript can go here in this script element. -->
+    <script>
+        jQuery(document).ready(function ($) {
+
+            /*
+               This is the code to slide the main navigation up and down.
+            */
+
+            $('#menu_button').click(function (evt) {
+                console.log('evt', evt);
+                evt.preventDefault();
+                $('#main_nav').slideToggle();
+            }); //end menu_button
+
+
+            //this code taken from Sebastien on Stackoverflow: http://stackoverflow.com/questions/6461300/triggering-jquery-with-css-media-queries
+            //it's been rearranged slightly
+            //leave the lines below and then write your code in the doneResizing function below
+            doneResizing();
+            var id;
+            $(window).resize(function () {
+                clearTimeout(id);
+                id = setTimeout(doneResizing, 0);
+            });
+
+            function doneResizing() {
+                //this code requires that you have Modernizr included BEFORE this file. Here is modernizr: http://modernizr.com/
+                //the trick with min-width media queries is that you need to start from your largest and go down. In the else at the end you can write  js for any size below your smallest min-width.
+
+                 if (Modernizr.mq('screen and (min-width:45em)')) {
+                    $('#main_nav').show(); //make sure it is showing at larger sizes
+                } else {
+                    //Your code goes here for screens below 45em in this example.
+                    $('#main_nav').hide(); //make sure hiding at smaller sizes
+                }
+            } //end doneResizing
+
+        });
+    </script>
+</body>
+</html>

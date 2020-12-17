@@ -1,0 +1,96 @@
+/**EVENTS**/
+
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: $primary;
+}
+
+.events {
+    
+    ul li {
+        display:inline-block;
+        vertical-align: top;
+        
+        &.information {
+            width: 70%;
+        }
+    }
+ 
+    .col-3 {
+        margin-top:50px;
+    }
+    
+    h3 {
+        font-family:'Raleway', sans-serif;
+        font-weight:bold;
+        color:$counter;
+    }
+    
+    h4 + h4 {
+        color:$coal;
+    }
+    
+    h4 small, h5 {
+        color:$primary;
+        font-family:'Raleway', sans-serif;
+        font-weight:bolder;
+    }
+    
+    h5 {
+        color:$palette4;
+    }
+    
+}
+
+/*** EVENTS ***/
+
+.googleCalendar {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.calendar-box {
+    color:$palette2;
+    font-size:2em;
+    background:$cal;
+    padding:15px;
+    margin-right: 15px;
+}
+
+/** DEFAULT FORMATTING */
+ .events {
+   
+   ul {
+    padding:0;
+    margin:1em 1em 0 0;
+   }
+   
+   h3 {
+    margin:0;
+    font-size:1.5em;
+   }
+   
+   h4 {
+    margin: .5em 0;
+    font-size:1.25em;
+    font-weight:normal;
+   }
+   
+   h5 {
+    font-size:.9em;
+    font-weight:normal;
+   }
+   
+ }
+  

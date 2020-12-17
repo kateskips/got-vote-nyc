@@ -1,0 +1,523 @@
+// NOTE: This requires that you have Susy available. http://susy.oddbird.net
+// If you are using an app like Scout http://scout-app.io then it will add susy automatically when you write @import "susy";
+
+//GLOBAL SUSY LAYOUT SETTINGS ======================================
+@import "susy";
+$global-box-sizing: border-box;
+//This creates settting with a 12 column grid, gutters that are 1/2 the width of 1 column, gutters inside by setting the padding, a maximum width of 1500px and border-box
+$susy: (
+    columns: 12,
+    gutters: 1/2,
+    gutter-position: inside,
+    container: 1900px,
+    global-box-sizing: border-box,
+);
+
+//Breakpoints
+
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+
+@mixin for-tablet-portrait-up {
+ @media (min-width: $tablet-portrait) and (max-width:$desktop 1px) {
+  @content;
+ }
+}
+
+@mixin for-tablet-landscape-up {
+ @media (min-width:$tablet-landscape) and (max-width:$desktop - 1px) {
+  @content;
+ }
+}
+
+@mixin for-desktop-up {
+ @media (min-width: $desktop) {
+  @content;
+ }
+}
+
+@mixin only-for-tablet-landscape-and-below {
+ @media (max-width:$tablet-landscape - 1px) {
+  @content;
+ }
+}
+
+@mixin for-phone-only {
+ @media (max-width: $tablet-portrait - 1px) {
+  @content;
+ }
+}
+
+/* =============================
+BREAKPOINTS
+==============================*/
+
+@include for-phone-only {
+ 
+}//end for phone only
+
+@include for-tablet-portrait-up {
+ 
+ 
+ html {
+  
+  body {
+      .candidates {
+    
+    .col-4 {
+     @include span(6);
+     padding-left:0;
+     
+     h3, h4 {
+      margin-top:0;
+     }
+    }
+   }
+   
+   .involved {
+    text-align:center;
+   }
+  }
+  
+  .home {
+   
+   .countdown {
+    
+    #clock {
+      font-size:80%;
+     
+     p {
+     @include span(15%);
+    }
+   }
+  }
+  
+   .events {
+    .col-3 {
+     @include span(6);
+     &:last-child {
+      @include span(8);
+      float:none;
+      clear:left;
+      margin:0 auto;
+      
+      ul li.information {
+        width:74%;
+      }
+      
+     }
+     
+     ul li.information {
+      width:68%;
+     }
+     
+    }
+   }
+
+  }
+  
+  .candidates-info {
+   //Candidates Page
+   
+   .senators {
+    
+    .col-4:nth-child(5) {
+       clear:left; 
+    }
+    
+   }
+   
+   .the-house-of-reps {
+    
+    .col-3 {
+     @include span(4);
+    }
+    
+   }
+   
+   .nys-assembly {
+    text-align:center;
+    
+    .assembly {
+     padding:3em;
+     margin-bottom:0;
+     
+    .col-2 {
+     @include span(6);
+    }
+    
+    }
+    
+    .nys-senate {
+     padding:3em;
+    }
+    
+    .cf .title {
+     margin: 1em 0 2em;
+    }
+     
+   }
+   
+  }
+  
+  .events-calendar {
+   //events-page
+   
+   .more-info-involved {
+    
+    ul {
+      text-align: left;
+      max-width: 65%;
+      margin: 0 auto;
+    }
+    
+   }
+   
+  }
+ 
+  .resources-page {
+   //Election Page
+   
+   .election-info {
+    
+    h3 {
+     margin:0;
+     text-align:center;
+    }
+    
+   }
+   
+  }
+  
+  .register {
+   
+   .special-populations .col-3 {
+    @include span(6);
+    min-height:290px;
+    margin-bottom:.5em;
+    &:last-child {
+     @include span(12);
+     min-height:100px;
+    }
+   }
+   
+  }
+  
+  
+ } //end html for tablet portrait
+ 
+ 
+}//end for tablet portrait only
+
+@include for-tablet-landscape-up {
+ 
+ html {
+  
+  .home {
+   
+   .countdown #clock {
+    
+    font-size:100%;
+    
+    p {
+     @include span(18%);
+    }
+    
+   }
+   
+   .events {
+    
+    .col-3, .col-3:last-child {
+     @include span(4);
+     clear:none;
+         margin-top: 50px;
+     
+     ul li.information {
+          width: 68%;
+     }
+    }
+    
+   }
+   
+  }
+  
+  body {
+  
+  .candidates {
+   
+   .col-4 {
+    @include span(3);
+   }
+   
+   }
+  
+   .social-share h3 {
+    margin-top:0;
+   }
+   
+   footer ul {
+    padding-left:0;
+   }
+   
+  } //body
+  
+  
+  .about-page {
+    
+    .col-2 {
+     @include span(6);
+    }
+    
+   } //about page
+  
+  .election-day {
+   
+   .polling-locations, .absentee-ballot {
+     padding:3em;
+   }
+   
+  } //election-day
+  
+  .candidates-info {
+   
+   .senators {
+    
+    .col-4:nth-child(5) {
+     clear:none;
+    }
+    
+   }
+   
+  } //candidates info
+  
+  .resources-page {
+   
+   .media {
+    
+    .col-2 {
+     @include span(6);
+    }
+    
+   }
+   
+  } // resources page
+  
+  
+  .register {
+   
+   .register-status, .take-action {
+    
+    .col-2 {
+     
+     @include span(6);
+     
+    }
+    
+   }
+   
+  }
+  
+ } //end of html for tablet landscape
+ 
+ 
+}//end for tablet landscape only
+
+@include for-desktop-up {
+ 
+  body {
+  
+ .col-2 {
+  @include span(6);
+ }
+ 
+ .col-3 {
+  @include span(4);
+ }
+ 
+  .col-4 {
+  @include span(3);
+ }
+   
+    .col-5 {
+  @include span(33%);
+     &:nth-child(5) {
+      clear:left;
+     }
+     
+     h3 {
+      font-size:1.5em;
+     }
+ }
+  
+ }
+ 
+ .page-header {
+  @include span(12);
+  
+  .logo {
+   @include span(2);
+  }
+  
+  #main_nav {
+   @include span(82%);
+   clear:none;
+   position:static;
+   padding-top:4%;
+   
+   ul {
+    overflow:hidden;
+    text-align:right;
+    
+    li, li a {
+    background-color:transparent;
+    display:inline-block;
+     float:none;
+    }
+   }
+   
+  }
+ }
+ 
+ main .top-header {
+  padding:10em 0;
+ }
+ 
+ .about-home {
+   p {
+   max-width:75%;
+   width:100%;
+   margin:0 auto;
+  }
+ }
+ 
+.countdown { 
+ margin-top:0;
+ 
+  .inner-section {
+   max-width:40%;
+  }
+  
+  p {
+   @include span(1 of 6);
+   padding:0;
+  }
+ }
+ 
+ .events {
+  
+  .col-3 {
+   @include span(4);
+ }
+  
+ }
+ 
+ .candidates {
+  
+  .col-4 {
+   @include span(3);
+  }
+  
+  .col-2, .col-3, .col-4 {
+  h3 {
+    margin:0;
+   }
+   
+   h4 {
+    margin: .5em 0;
+   }
+  
+ }
+ }
+ 
+ .get-involved {
+  
+  .col-2 {
+    @include span(6);
+  }
+  
+ }
+ 
+ footer {
+  
+  nav ul li {
+   margin:0 1em 1.4em 0;
+   display:inline-block;
+  }
+ }
+ 
+ 
+}//end for desktop only
+
+@include only-for-tablet-landscape-and-below {
+ 
+ html {
+  
+ body {
+  //General
+  
+  section.involved {
+ 
+   .main-btn, .light-main-btn {
+    margin:20px auto 0;
+    display:block;
+    text-align:center;
+    max-width:280px;
+   }
+  }
+  
+  .social-share {
+   
+   h3 {
+    margin-top:0;
+   }
+   
+  }
+  
+ footer nav {
+  
+  ul {
+   padding-left:0;
+  }
+  
+ }
+
+}
+ 
+ 
+ .election-day {
+ //Election Page
+  
+   .polling-locations, .absentee-ballot {
+    padding:3em;
+   }
+  
+}
+ 
+ .candidates-info {
+  //Candidates Page
+
+     a.inverse-btn {
+      text-decoration:none;
+     }
+  
+}
+ 
+ .register {
+  //Register Page
+  
+  .locations {
+   
+   .col-5 {
+    max-width:100%;
+   }
+   
+  }
+  
+ }
+ 
+ }//html-end
+ 
+}//end only-for-tablet-landscape-and-below
+
+

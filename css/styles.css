@@ -1,0 +1,1623 @@
+/* ============================
+* Clearfix-oldIE
+* This is a clearfix mixin that works on old IE browsers
+* Modified from: http://nicolasgallagher.com/micro-clearfix-hack/
+* If you already have a clearfix then you can ignore this.
+* =============================*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/*
+====================================
+Modified Normalize.css Code
+
+This is a modified version of normalize.css
+It has been modified to remove some of the choices such as font-family, that a designer should make. Most of what is taken out is added in a separate starter stylesheet meant to be used in combination with this version of normalize.css
+====================================
+*/
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  /*  font-family: sans-serif;  1 */
+  /* Removed in order to allow designer to set the default fonts */
+  /*   line-height: 1.15;*/
+  /* 2 */
+  /* Removed in order to allow designer to set the default line-height */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* Removed in order to allow designer to set the default typography */
+/*
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+*/
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/*Removed to allow the designer to set the typography*/
+/*
+button,
+input,
+optgroup,
+select,
+textarea {
+*/
+/* font-family: sans-serif;*/
+/* 1 */
+/*  font-size: 100%;*/
+/* 1 */
+/*  line-height: 1.15;*/
+/* 1 */
+/*  margin: 0;*/
+/* 2 */
+/* }*/
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/*Removing opinionated styling*/
+/*
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+*/
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/* RESPONSIVE PREPARATION
+   ====================================================================
+   Use these "as is"
+*/
+/*The following 7 lines are from Paul Irish and apply a border-box model.
+See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Basic Responsive Images and Video */
+img, video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Embedded Video Styles
+
+    These can be used to help add embedded video content, like YouTube videos, to your page. These styles require you set up your HTML in a specific way. See this CodePen for an example of it in use: http://codepen.io/profstein/pen/mArLRj
+*/
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper.ratio-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio video */
+}
+
+.videoWrapper.ratio-4-3 {
+  padding-bottom: 75%;
+  /* 4:3 aspect ratio video */
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Base Typographic Styles
+   ==========================================================================
+
+/*
+Set a default font-family, font-size and line-height in the html
+This will set the default for the entire site.
+*/
+html {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Usually at least a bottom margin is given to separate paragraphs. font-size and font-family are inherited from body*/
+p {
+  margin: 0 0 1em 0;
+}
+
+/*Set a default font-family for the headings*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  /*change to add a proper font stack */
+  line-height: 1.2;
+}
+
+/*
+Set the font-size of each heading individually
+You can also change the line-height here individually if you want then different from the global line-height set above
+You may also want to set the top and bottom margins and padding
+*/
+h1 {
+  font-size: 3.5em;
+  /*    line-height: 1;*/
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.6em;
+  /*    line-height: 1;*/
+  margin: 2em 0 .5em 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.25em;
+  /*    line-height: 1;*/
+  margin: 2em 0 .5em 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 1.777em;
+  /*    line-height: 1;*/
+  margin: 2em 0 .5em 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 1.333em;
+  /*    line-height: 1;*/
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+h6 {
+  font-size: 1.333em;
+  /*    line-height: 1;*/
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+/*Other relatively common elements to style. Uncomment and change to your liking*/
+/*These are used to display text like pre-formatted text and code samples*/
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Set the font styles related to forms
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* =============================
+BREAKPOINTS
+==============================*/
+@media (min-width: 600px) and (max-width: 1200px 1px) {
+  html body .candidates .col-4 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    padding-left: 0;
+  }
+  html body .candidates .col-4 h3, html body .candidates .col-4 h4 {
+    margin-top: 0;
+  }
+  html body .involved {
+    text-align: center;
+  }
+  html .home .countdown #clock {
+    font-size: 80%;
+  }
+  html .home .countdown #clock p {
+    width: 15%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .home .events .col-3 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .home .events .col-3:last-child {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    float: none;
+    clear: left;
+    margin: 0 auto;
+  }
+  html .home .events .col-3:last-child ul li.information {
+    width: 74%;
+  }
+  html .home .events .col-3 ul li.information {
+    width: 68%;
+  }
+  html .candidates-info .senators .col-4:nth-child(5) {
+    clear: left;
+  }
+  html .candidates-info .the-house-of-reps .col-3 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .candidates-info .nys-assembly {
+    text-align: center;
+  }
+  html .candidates-info .nys-assembly .assembly {
+    padding: 3em;
+    margin-bottom: 0;
+  }
+  html .candidates-info .nys-assembly .assembly .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .candidates-info .nys-assembly .nys-senate {
+    padding: 3em;
+  }
+  html .candidates-info .nys-assembly .cf .title {
+    margin: 1em 0 2em;
+  }
+  html .events-calendar .more-info-involved ul {
+    text-align: left;
+    max-width: 65%;
+    margin: 0 auto;
+  }
+  html .resources-page .election-info h3 {
+    margin: 0;
+    text-align: center;
+  }
+  html .register .special-populations .col-3 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    min-height: 290px;
+    margin-bottom: .5em;
+  }
+  html .register .special-populations .col-3:last-child {
+    width: 100%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  html .home .countdown #clock {
+    font-size: 100%;
+  }
+  html .home .countdown #clock p {
+    width: 18%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .home .events .col-3, html .home .events .col-3:last-child {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    clear: none;
+    margin-top: 50px;
+  }
+  html .home .events .col-3 ul li.information, html .home .events .col-3:last-child ul li.information {
+    width: 68%;
+  }
+  html body .candidates .col-4 {
+    width: 25%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html body .social-share h3 {
+    margin-top: 0;
+  }
+  html body footer ul {
+    padding-left: 0;
+  }
+  html .about-page .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .election-day .polling-locations, html .election-day .absentee-ballot {
+    padding: 3em;
+  }
+  html .candidates-info .senators .col-4:nth-child(5) {
+    clear: none;
+  }
+  html .resources-page .media .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  html .register .register-status .col-2, html .register .take-action .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  body .col-3 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  body .col-4 {
+    width: 25%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  body .col-5 {
+    width: 33%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  body .col-5:nth-child(5) {
+    clear: left;
+  }
+  body .col-5 h3 {
+    font-size: 1.5em;
+  }
+  .page-header {
+    width: 100%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  .page-header .logo {
+    width: 16.66667%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  .page-header #main_nav {
+    width: 82%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    clear: none;
+    position: static;
+    padding-top: 4%;
+  }
+  .page-header #main_nav ul {
+    overflow: hidden;
+    text-align: right;
+  }
+  .page-header #main_nav ul li, .page-header #main_nav ul li a {
+    background-color: transparent;
+    display: inline-block;
+    float: none;
+  }
+  main .top-header {
+    padding: 10em 0;
+  }
+  .about-home p {
+    max-width: 75%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .countdown {
+    margin-top: 0;
+  }
+  .countdown .inner-section {
+    max-width: 40%;
+  }
+  .countdown p {
+    width: 16.66667%;
+    float: left;
+    padding-left: 2.77778%;
+    padding-right: 2.77778%;
+    padding: 0;
+  }
+  .events .col-3 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  .candidates .col-4 {
+    width: 25%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  .candidates .col-2 h3, .candidates .col-3 h3, .candidates .col-4 h3 {
+    margin: 0;
+  }
+  .candidates .col-2 h4, .candidates .col-3 h4, .candidates .col-4 h4 {
+    margin: .5em 0;
+  }
+  .get-involved .col-2 {
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+  footer nav ul li {
+    margin: 0 1em 1.4em 0;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 899px) {
+  html body section.involved .main-btn, html body section.involved .light-main-btn {
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+    max-width: 280px;
+  }
+  html body .social-share h3 {
+    margin-top: 0;
+  }
+  html body footer nav ul {
+    padding-left: 0;
+  }
+  html .election-day .polling-locations, html .election-day .absentee-ballot {
+    padding: 3em;
+  }
+  html .candidates-info a.inverse-btn {
+    text-decoration: none;
+  }
+  html .register .locations .col-5 {
+    max-width: 100%;
+  }
+}
+
+/* ============================
+* NAVIGATION
+* =============================*/
+/** HEADER STYLES **/
+.page-head {
+  min-height: 140px;
+  background: #FFF;
+}
+
+.page-head nav ul {
+  width: 100%;
+}
+
+.page-head nav ul li a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #313198;
+}
+
+.page-head nav ul li a.current {
+  color: #FF0000;
+}
+
+header .logo {
+  float: left;
+  margin-top: 1em;
+  margin-left: 0.625em;
+}
+
+/* ============================
+* Clearfix
+* Modified from: http://nicolasgallagher.com/micro-clearfix-hack/
+* If you already have a clearfix then you can ignore this.
+* =============================*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+/* ============================
+* NAVIGATION 
+* Modified from: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/a-simple-responsive-mobile-first-navigation/
+* =============================*/
+#main_nav {
+  clear: both;
+  display: none;
+  /*hidden to start */
+}
+
+#main_nav ul {
+  list-style: none;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+#main_nav ul li.last a {
+  border-bottom: 0;
+}
+
+#main_nav ul li a {
+  display: block;
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  padding: 0.625em;
+  /* 10px in ems is 10/16 */
+  text-decoration: none;
+  border-bottom: 1px dashed #cecece;
+  font-weight: 900;
+}
+
+#main_nav ul li a:hover {
+  color: #555;
+  background-color: #fff;
+}
+
+#main_nav ul li a:active {
+  color: #FFF;
+  background-color: #980202;
+}
+
+/* menu button */
+.menu {
+  margin-top: 3.5em;
+  margin-bottom: 1em;
+  margin-right: 1.5em;
+  text-align: right;
+}
+
+.menu a {
+  padding: 0.5em 0.625em;
+  /*10/16 */
+  background-color: #2f2f8b;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #FFF;
+  background-color: #980202;
+}
+
+/* ==========================
+*  Media Queries for Main Nav
+*  ========================== */
+/* these don't have to be separate. We did so for two reasons:
+1. Easy to copy and paste this into new design
+2. Depending on your site you may need separate break points for the nav. You may want to see what width is needed to fit your nav horizontally without breaking and use that as the breakpoint. 
+It should also be noted that there is only one media query because this CSS moves the nav to the top where it can stay for all of the other sizes.
+*/
+/* 56.255em is about 900px depending on the base font-size */
+@media only screen and (min-width: 56.255em) {
+  /* hide the menu button */
+  .menu {
+    display: none;
+  }
+  #main_nav {
+    /* move main_nav to top of the screen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* other main nav styling */
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+  #main_nav ul li {
+    display: inline;
+    line-height: 1em;
+  }
+  #main_nav ul li a {
+    float: left;
+    padding: 0.9375em;
+    /* 10/16  and  15/16 */
+    border-bottom: none;
+  }
+  #main_nav ul li a.top {
+    display: none;
+  }
+  .container {
+    margin-top: 4em;
+    /* adjust depending on the height of your nav */
+  }
+}
+
+body {
+  color: #11114f;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body h2 {
+  margin: 30px 0;
+  min-height: 35px;
+  text-transform: uppercase;
+}
+
+body main section {
+  padding: 2em 1em;
+  clear: both;
+}
+
+body main section ul {
+  margin: 1em;
+}
+
+body main section ul li {
+  margin-bottom: 1em;
+}
+
+body img {
+  height: auto;
+}
+
+body .center {
+  text-align: center;
+}
+
+body a.inverse-btn {
+  font-family: 'Raleway',sans-serif;
+  border: 3px solid #FFF;
+  padding: 15px 25px;
+  display: inline-block;
+  margin-top: 35px;
+}
+
+/** CONTENT STYLES **/
+.inner-section {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+main a[href*="http"]:not([class*="btn"]):after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f08e";
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+/** COLORED SECTIONS **/
+.purple-inverse {
+  background: #11114f;
+  padding: 60px 15px;
+}
+
+.purple-inverse * {
+  color: #FFF;
+}
+
+.purple-inverse a:not([class*="btn"]) {
+  text-decoration: underline;
+}
+
+/** CUSTOM GRID LAYOUT **/
+.col-2,
+.col-3,
+.col-4 {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+/** FOOTER STYLES **/
+footer {
+  background-color: #464646;
+  font-family: 'Raleway';
+  padding-top: 15px;
+}
+
+footer nav ul {
+  text-align: center;
+}
+
+footer nav ul li {
+  margin: 15px;
+  list-style: none;
+}
+
+footer nav ul li a {
+  color: #FFF;
+}
+
+footer p {
+  text-align: center;
+  background-color: #363636;
+  padding: 25px 0;
+  color: #FFF;
+  margin: 0;
+}
+
+/*** HOMEPAGE ***/
+.top-header {
+  padding: 5em 0;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #FFF;
+}
+
+.top-header h2 {
+  font-size: 1.4em;
+  margin: 10px 15px 50px;
+}
+
+.home-head {
+  background: url("/images/get-out-to-vote.png");
+}
+
+.light-main-btn,
+.main-btn {
+  color: #FFF;
+  padding: 15px 25px;
+  background-color: #980202;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.light-main-btn {
+  background-color: #bc0404;
+}
+
+.main-btn + .light-main-btn {
+  margin-left: 15px;
+}
+
+/** COUNTDOWN **/
+.countdown {
+  color: #343499;
+  margin-top: 30px;
+}
+
+.countdown .time-head {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.countdown #clock {
+  text-align: center;
+  min-height: 140px;
+  margin-top: 50px;
+}
+
+.countdown #clock p {
+  font-size: 5em;
+  line-height: 0.7em;
+  font-weight: bold;
+  margin: 0 25px 35px;
+}
+
+.countdown #clock p span {
+  display: block;
+  font-weight: 400;
+  font-size: 40%;
+}
+
+/** SOCIAL SHARE **/
+.social-share {
+  text-align: center;
+}
+
+.social-share h3 {
+  text-align: center;
+  margin-top: 5em;
+  font-size: 1.5em;
+}
+
+.social-share ul.share-buttons {
+  list-style: none;
+  padding: 0;
+}
+
+.social-share ul.share-buttons li {
+  display: inline;
+  margin-right: 5px;
+}
+
+.social-share ul.share-buttons li a:after {
+  display: none;
+}
+
+.social-share ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.social-share ul.share-buttons img {
+  width: 32px;
+}
+
+/** ABOUT **/
+.about-head {
+  background: url("/images/about-banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.light-purple-box, .purple-box {
+  background: #11114f;
+  color: #FFF;
+  padding: 1em .625em;
+}
+
+.light-purple-box h3, .purple-box h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.light-purple-box h4, .purple-box h4 {
+  font-size: 1.1em;
+}
+
+.light-purple-box a, .purple-box a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.light-purple-box {
+  background: #31316c;
+}
+
+/**EVENTS**/
+.intro {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #11114f;
+}
+
+.events ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.events ul li.information {
+  width: 70%;
+}
+
+.events .col-3 {
+  margin-top: 50px;
+}
+
+.events h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: #343499;
+}
+
+.events h4 + h4 {
+  color: #222;
+}
+
+.events h4 small, .events h5 {
+  color: #11114f;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+}
+
+.events h5 {
+  color: #949494;
+}
+
+/*** EVENTS ***/
+.googleCalendar {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.googleCalendar iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.calendar-box {
+  color: #FFF;
+  font-size: 2em;
+  background: #2f2f8b;
+  padding: 15px;
+  margin-right: 15px;
+}
+
+/** DEFAULT FORMATTING */
+.events ul {
+  padding: 0;
+  margin: 1em 1em 0 0;
+}
+
+.events h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.events h4 {
+  margin: .5em 0;
+  font-size: 1.25em;
+  font-weight: normal;
+}
+
+.events h5 {
+  font-size: .9em;
+  font-weight: normal;
+}
+
+/** ELECTION DAY **/
+.election-head, .genhead {
+  background: url("/images/general-banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.polling-information {
+  padding: 0;
+}
+
+.polling-information .col-2 {
+  margin-bottom: 0;
+}
+
+.polling-locations {
+  padding: 6em 5em;
+}
+
+.cuny-poll-worker {
+  margin-top: 2em;
+}
+
+/*** CANDIDATES ***/
+.candidates h3,
+.candidates h4 {
+  font-weight: 600;
+}
+
+.candidates h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.candidates h4 {
+  font-size: 1em;
+}
+
+/** GET INVOLVED **/
+.dark-purple-inverse {
+  background-color: #010133;
+}
+
+.dark-purple-inverse * {
+  color: #FFF;
+}
+
+.involved .main-btn,
+.involved .light-main-btn {
+  margin: 20px 0;
+}
+
+.candidates-info h2 + p {
+  margin-bottom: 3em;
+}
+
+.purple-inverse.darker {
+  background: #030345;
+}
+
+.candidates.candid .btn-2 {
+  margin: 20px 0 25px;
+  font-weight: 600;
+}
+
+.congress {
+  text-align: center;
+}
+
+.congress h3 {
+  margin: 0 0 .5em 0;
+}
+
+.the-house-of-reps h2 + p, .the-house-of-reps .col-3 {
+  text-align: center;
+}
+
+.the-house-of-reps h2 + p a, .the-house-of-reps .col-3 a {
+  text-decoration: none;
+}
+
+.the-house-of-reps img {
+  max-height: 310px;
+}
+
+.nys h2, .nys ol p {
+  text-align: center;
+}
+
+.nys ol {
+  max-width: 400px;
+  margin: 0 auto 3em;
+  padding-left: 0;
+}
+
+.nys ol p {
+  font-weight: bold;
+}
+
+.nys ol li {
+  margin-bottom: 1em;
+}
+
+.nys ol + p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nys-assembly img {
+  max-height: 300px;
+}
+
+.nys-assembly .col-2 h3 {
+  margin: 0;
+}
+
+.nys-assembly h4 {
+  margin: .5em 0;
+}
+
+.nys-assembly .cf {
+  text-align: center;
+}
+
+.nys-assembly .cf .title {
+  margin-bottom: 1em;
+}
+
+.nys-assembly .republican-primary {
+  margin-top: 35px;
+}
+
+.nys-assembly .republican-primary h3 {
+  margin-bottom: 0;
+}
+
+.sources {
+  padding-top: 0;
+}
+
+.sources h2, .sources p {
+  text-align: center;
+}
+
+.sources .inner-section {
+  max-width: 600px;
+}
+
+.sources .inner-section p {
+  margin-bottom: 2em;
+}
+
+.register .half-width .inner-section {
+  max-width: 600px;
+}
+
+.register .locations .col-5 {
+  width: 100%;
+  padding-left: 0;
+  max-width: 50%;
+  margin: 0 auto 3em;
+}
+
+.register .locations .col-5:nth-child(5) {
+  clear: none;
+}
+
+.register .locations .col-5 strong {
+  display: block;
+}
+
+.register .special-populations h3 {
+  margin: 0;
+}
+
+.register .special-populations p {
+  word-wrap: break-word;
+}
+
+.register .special-populations .col-3 {
+  min-height: 270px;
+}
+
+.register #accordion .ui-accordion-content-active:last-child .ui-widget-content a {
+  color: #11114f;
+}

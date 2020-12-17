@@ -1,0 +1,32 @@
+/** ABOUT **/
+
+.about-head {
+    background:url('/images/about-banner.png');
+    background-position:center;
+    background-size:cover;
+}
+
+.light-purple-box, .purple-box {
+    background: $primary;
+    color:$palette2;
+    padding:1em .625em;
+    
+    h3 {
+        font-family:'Raleway', sans-serif;
+        font-size:1.3em;
+        margin-bottom:1em;
+    }
+    
+    h4 {
+        font-size:1.1em;   
+    }
+    
+    a {
+        color:$palette2;
+     text-decoration:underline;
+    }
+}
+
+.light-purple-box {
+    background:#31316c;
+}

@@ -1,0 +1,25 @@
+/** ELECTION DAY **/
+
+.election-head, .genhead {
+    background:url('/images/general-banner.png');
+     background-position:center;
+    background-size:cover;
+}
+
+.polling-information {
+ 
+ padding:0;
+ 
+ .col-2 {
+  margin-bottom:0;
+ }
+ 
+}
+
+.polling-locations {
+     padding:6em 5em;
+}
+
+.cuny-poll-worker {
+     margin-top: 2em;
+}

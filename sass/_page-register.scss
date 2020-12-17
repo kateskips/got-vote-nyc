@@ -1,0 +1,58 @@
+//nest everything in the register class to ensure it only applies to this page
+.register{
+
+
+ .half-width {
+  
+  .inner-section {
+   max-width:600px;
+  }
+  
+ }
+ 
+ .locations {
+  
+  .col-5 {
+    width: 100%;
+    padding-left: 0;
+    max-width: 50%;
+    margin: 0 auto 3em;
+   &:nth-child(5) {
+    clear:none;
+   }
+   
+   strong {
+    display:block;
+   }
+   
+  }
+  
+ }
+ 
+ .special-populations {
+   h3 {
+    margin:0;
+   }
+  
+  p {
+   word-wrap: break-word;
+  }
+  
+  .col-3 {
+   min-height:270px;
+  }
+  
+ }
+ 
+ #accordion {
+  .ui-accordion-content-active:last-child {
+   
+   .ui-widget-content a {
+    color:#11114f;
+   }
+   
+  }
+ }
+
+}//end .register
+//all SCSS for the page should be inside of this .register class

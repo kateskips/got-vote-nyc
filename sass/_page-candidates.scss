@@ -1,0 +1,166 @@
+/*** CANDIDATES ***/
+
+.candidates {
+    
+    h3,
+    h4 {
+        font-weight:600;
+    }
+    
+    h3 {
+        font-size:1.5em;
+        margin-bottom:10px;
+    }
+    
+    h4 {
+        font-size:1em;
+    }
+}
+
+/** GET INVOLVED **/
+
+.dark-purple-inverse {
+    background-color:$darkpulp;
+    
+    * {
+        color:$palette2;
+    }
+}
+
+.involved {
+    .main-btn,
+    .light-main-btn {
+        margin:20px 0;
+    }
+}
+
+//CANDIDATES
+
+.candidates-info {
+ 
+ h2 + p {
+  margin-bottom:3em;
+ }
+ 
+}
+
+.purple-inverse.darker {
+    background:$palette5;
+}
+
+.candidates.candid .btn-2 {
+    margin: 20px 0 25px;
+    font-weight:600;
+}
+
+.congress {
+  
+ text-align:center;
+ 
+ h3 {
+  margin:0 0 .5em 0;
+ }
+ 
+}//congress section
+
+.the-house-of-reps {
+ 
+ h2 + p, .col-3 {
+  text-align:center;
+ 
+  a {
+   text-decoration:none;
+  }
+  
+ }
+ 
+ img {
+   max-height:310px;
+  }
+ 
+ 
+}//the-house-of-reps section
+
+.nys {
+ 
+ h2, ol p {
+  text-align:center;
+ }
+ 
+ ol {
+    max-width: 400px;
+    margin: 0 auto 3em;
+  padding-left:0;
+  
+  p {
+   font-weight:bold;
+  }
+  
+  li {
+   margin-bottom:1em;
+  }
+ }
+ 
+ ol + p {
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+ }
+ 
+ 
+}//New York State
+
+.nys-assembly {
+ 
+ img {
+  max-height:300px;
+ }
+ 
+ .col-2 {
+  h3 {
+   margin:0;
+  }
+ }
+ 
+ h4 {
+  margin:.5em 0;
+ }
+ 
+  
+ .cf {
+  
+  text-align:center;
+  
+  .title {
+   margin-bottom:1em;
+  }
+  
+ }
+
+ 
+ .republican-primary {
+  margin-top:35px;
+  
+  h3 {
+   margin-bottom:0;
+  }
+  
+ }
+ 
+}//assembly
+
+.sources {
+ padding-top:0;
+ 
+ h2, p {
+  text-align:center;
+ }
+ 
+ .inner-section {
+  max-width:600px;
+  
+  p {
+   margin-bottom:2em;
+  }
+ } 
+} //sources

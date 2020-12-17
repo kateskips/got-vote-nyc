@@ -1,0 +1,379 @@
+body {
+    font-size:1em;
+    line-height:1.5em;
+    font-family:'Open Sans', sans-serif;
+    color:#11114f;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration:none;
+}
+
+h2 {
+    font-size:2.6em;
+    font-weight:bold;
+    font-family:'Raleway', sans-serif;
+    margin: 30px 0;
+    min-height:35px;
+    text-transform:uppercase;
+    line-height: 1.3em;
+}
+
+
+p {
+    margin:0 0 1em 0;
+}
+main section {
+    padding: 2em 1em;
+    clear:both;
+}
+
+main section ul {
+    margin:1em;
+}
+
+main section ul li {
+    margin-bottom:1em;
+}
+
+img {
+    height:auto;
+}
+
+/** HEADER STYLES **/
+
+.page-head {
+    min-height:140px;
+    background:#FFF;
+}
+
+.page-head nav ul {
+    width:100%;
+}
+
+.page-head nav ul li a {
+    font-family:'Raleway', sans-serif;
+    font-weight:400;
+    color:#313198;
+}
+
+.page-head nav ul li a.current {
+    color:#ff0000;
+}
+
+header .logo {
+    float: left;
+    margin-top: 1em;
+    margin-left: 0.625em;
+}
+
+/** NAV STYLES **/
+/** CONTENT STYLES **/
+
+.inner-section {
+    max-width:1170px;
+    margin:0 auto;
+    width:100%;
+    overflow:hidden;
+}
+
+/*** HOMEPAGE ***/
+
+.top-header {
+    padding:5em 0;
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    color:#FFF;
+}
+
+.home-head {
+    background:url('/images/get-out-to-vote.png');
+}
+
+.top-header h1 {
+    font-size:3.5em;
+    font-family:'Raleway', sans-serif;
+    font-weight:800;
+    line-height: 1.2em;
+}
+
+.top-header h2 {
+    font-size: 1.4em;
+    margin: 10px 15px 50px;
+}
+
+.light-main-btn, .main-btn {
+    color:#FFF;
+    padding:15px 25px;
+    background-color:#980202;
+    display:inline-block;
+    font-family:'Raleway', sans-serif;
+    font-weight:600;
+}
+
+.light-main-btn {
+    background-color:#bc0404;
+}
+
+.main-btn + .light-main-btn {
+    margin-left:15px;
+}
+
+/** COUNTDOWN **/
+
+.countdown {
+    color:#343499;
+    margin-top:30px;
+}
+
+#clock {
+    text-align:center;
+    min-height:140px;
+    margin-top:50px;
+}
+
+#clock p {
+    font-size:5em;
+    line-height:0.7em;
+    font-weight:bold;
+    margin:0 25px 35px;
+}
+
+#clock p span {
+    display:block;
+    font-weight:400;
+    font-size:40%;
+}
+
+.time-head {
+    text-align:center;
+    font-size:1.5em;
+}
+
+/** COLORED SECTIONS **/
+
+.purple-inverse {
+    background:#11114f;
+    padding:60px 15px;
+}
+
+.purple-inverse * {
+    color:#FFF;
+}
+
+.purple-inverse a:not([class*="btn"]) {
+    text-decoration:underline;
+}
+
+.center {
+    text-align:center;
+}
+
+a.inverse-btn {
+    font-family:'Raleway',sans-serif;
+    border:3px solid #FFF;
+    padding:15px 25px;
+    display:inline-block;
+    margin-top:35px;
+}
+
+/**EVENTS**/
+
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #11114f;
+}
+
+.events ul li {
+    display:inline-block;
+    vertical-align: top;
+}
+
+.events ul li.information {
+    width: 70%;
+}
+
+.events .col-3 {
+    margin-top:50px;
+}
+
+.calendar-box {
+    color:#FFF;
+    font-size:2em;
+    background:#2f2f8b;
+    padding:15px;
+    margin-right: 15px;
+}
+
+.events h3 {
+    font-family:'Raleway', sans-serif;
+    font-weight:bold;
+    color:#343499;
+    font-size: 1.15em;
+}
+
+.events h4+h4 {
+    color:#222222;
+    font-size: 1.15em;
+    line-height: 1.5em;
+}
+
+.events h4 small, .events h5 {
+    color:#11114f;
+    font-family:'Raleway', sans-serif;
+    font-weight:bolder;
+}
+
+.events h5 {
+    color:#949494;
+    font-size:.8em;
+}
+
+/*** CANDIDATES ***/
+
+.candidates h3,
+.candidates h4 {
+    font-weight:600;
+}
+
+.candidates h3 {
+    font-size:1.5em;
+    margin-bottom:10px;
+}
+
+.candidates h4 {
+    font-size:1em;
+}
+
+/** GET INVOLVED **/
+
+.dark-purple-inverse {
+    background-color:#010133;
+}
+
+.dark-purple-inverse * {
+    color:#FFF;
+}
+
+.involved .main-btn,
+.involved .light-main-btn {
+    margin:20px 0;
+}
+
+.col-2,
+.col-3,
+.col-4 {
+    width:100%;
+    margin-bottom:35px;
+}
+
+/** FOOTER STYLES **/
+
+footer {
+    background-color:#464646;
+    font-family:'Raleway';
+    padding-top:15px;
+}
+
+footer nav ul {
+    text-align:center;
+}
+
+
+footer nav ul li {
+    margin:15px;
+}
+
+footer nav ul li a {
+    color:#FFF;
+}
+
+footer p {
+    text-align:center;
+    background-color:#363636;
+    padding:25px 0;
+    color:#FFF;
+    margin:0;
+}
+
+/****** SUB PAGE STYLES ******/
+
+/** ABOUT **/
+
+.about-head {
+    background:url('/images/about-banner.png');
+        background-position:center;
+    background-size:cover;
+}
+
+.light-purple-box h3, .purple-box h3 {
+    font-family:'Raleway', sans-serif;
+    font-size:1.3em;
+    margin-bottom:1em;
+}
+
+.light-purple-box h4, .purple-box h4 {
+    font-size:1.1em;
+}
+
+.light-purple-box, .purple-box {
+    background: #11114f;
+    color:#FFF;
+    padding:1em .625em;
+}
+
+.light-purple-box {
+    background:#31316c;
+}
+
+.light-purple-box a, .purple-box a {
+    color:#FFF;
+}
+
+.light-purple-box a {
+    text-decoration:underline;
+}
+
+/** ELECTION DAY **/
+
+.election-head, .genhead {
+    background:url('/images/general-banner.png');
+     background-position:center;
+    background-size:cover;
+}
+
+/** CANDIDATE **/
+
+.purple-inverse.darker {
+    background:#030345;
+}
+
+.candidates.candid .btn-2 {
+    margin: 20px 0 25px;
+    font-weight:600;
+}
+
+/*** EVENTS ***/
+
+.googleCalendar{
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100% ;
+}
+
+.googleCalendar iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

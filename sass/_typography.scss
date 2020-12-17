@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Base Typographic Styles
+   ==========================================================================
+
+/*
+Set a default font-family, font-size and line-height in the html
+This will set the default for the entire site.
+*/
+
+html{
+    font-size:1em;
+    line-height:1.5em;
+    font-family:'Open Sans', sans-serif;
+}
+
+/*Usually at least a bottom margin is given to separate paragraphs. font-size and font-family are inherited from body*/
+p {
+    margin: 0 0 1em 0;
+}
+
+/*Set a default font-family for the headings*/
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Raleway', sans-serif; 
+ /*change to add a proper font stack */
+    line-height: 1.2;
+}
+
+/*
+Set the font-size of each heading individually
+You can also change the line-height here individually if you want then different from the global line-height set above
+You may also want to set the top and bottom margins and padding
+*/
+h1{
+    font-size:3.5em;
+/*    line-height: 1;*/
+    margin: 0;
+    padding: 0;
+    font-weight:800;
+}
+
+h2{
+    font-size:2.6em;
+/*    line-height: 1;*/
+    margin: 2em 0 .5em 0;
+    padding: 0;
+    font-weight:bold;
+}
+
+h3{
+    font-size:2.25em;
+/*    line-height: 1;*/
+    margin: 2em 0 .5em 0;
+    padding: 0;
+}
+
+h4{
+    font-size:1.777em;
+/*    line-height: 1;*/
+    margin: 2em 0 .5em 0;
+    padding: 0;
+}
+
+h5{
+    font-size:1.333em;
+/*    line-height: 1;*/
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+h6{
+    font-size:1.333em;
+/*    line-height: 1;*/
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+
+/*Other relatively common elements to style. Uncomment and change to your liking*/
+
+/*These are used to display text like pre-formatted text and code samples*/
+pre,code,kbd,samp{
+    font-family: monospace, monospace;
+    font-size:1em;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Set the font styles related to forms
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
